@@ -1,5 +1,6 @@
 package com.jshubhamstore.productservice.controllers;
 
+import com.jshubhamstore.productservice.exceptions.ProductNotFoundException;
 import com.jshubhamstore.productservice.models.Product;
 import com.jshubhamstore.productservice.services.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public Product getSingleProduct(@PathVariable("id") Long productId) {
+    public Product getSingleProduct(@PathVariable("id") Long productId) throws ProductNotFoundException {
         return productService.getSingleProduct(productId);
     }
 
