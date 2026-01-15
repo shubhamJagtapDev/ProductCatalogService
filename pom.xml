@@ -11,8 +11,8 @@
     <groupId>com.jshubhamStore</groupId>
     <artifactId>ProductService</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ProductService</name>
-    <description>ProductService</description>
+    <name>ProductCatalogService</name>
+    <description>ProductCatalogService</description>
     <url/>
     <licenses>
         <license/>
