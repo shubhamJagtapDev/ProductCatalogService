@@ -2,8 +2,9 @@ package com.jshubhamstore.productservice.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.UniqueConstraint;
+
 import lombok.Data;
 
 @Data
@@ -14,6 +15,6 @@ public class Product extends BaseModel{
     private String description;
     private Double price;
     private String imageUrl;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     private Category category;
 }
